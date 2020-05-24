@@ -15,13 +15,13 @@ equally well wherever you live in Sweden.
 To simply use it as a client to synchronize your local computer clock, just
 run it and add the capability to change the clock. For example:
 
-    docker run -d --name ntp --cap-add SYS_TIME --restart=always swedish-ntp
+    docker run -d --name ntp --cap-add SYS_TIME --restart=always jackbenny/swedish-ntp
 
 ### As a server
 You need to publish UDP port 123 to be able to connect to the OpenNTPD daemon. 
 For example:
 
-    docker run -d --name ntp --cap-add SYS_TIME --publish 123:123/udp --restart=always swedish-ntp
+    docker run -d --name ntp --cap-add SYS_TIME --publish 123:123/udp --restart=always jackbenny/swedish-ntp
 
 # Additional information
 For more information about Netnod NTP servers, see [Netnod's NTP
